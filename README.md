@@ -21,3 +21,5 @@ Template variables:<br>
 `$template->assign( 'items', array( array( 'name' => 'First' ), array( 'name' => 'Second' ) ) );`
 - Parse template:<br>
 `$template->parse( 'tpl.html' );`
+- Parse template:<br>
+`$template->parse2string( 'tpl.html' );`

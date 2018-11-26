@@ -54,6 +54,30 @@ class Template {
     }
 
     /**
+     * Parce template file
+     * @access public
+     * @param string $template_file
+     */
+    public function parse2string( $template_file ) {
+        if ( file_exists( $template_file ) ) {
+            $content = file_get_contents($template_file);
+
+            foreach ( $this->vars as $key => $value ) {
+                if ( is_array( $value ) ) {
+                    $content = $this->parsePair($key, $value, $content);
+                } else {
+                    $content = $this->parseSingle($key, (string) $value, $content);
+                }
+            }
+
+            return ( $content );
+        } else {
+            return( '<h1>Template error</h1>' );
+        }
+    }
+
+
+    /**
      * Parsing content for single varliable
      * @access private
      * @param string $key property name
@@ -113,4 +137,3 @@ class Template {
         return $match;
     }
 }
-        
