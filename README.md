@@ -3,14 +3,14 @@
 Simple PHP template class.
 
 ## Create template file
-[Example](https://github.com/isRuslan/php-template/blob/master/tpl.html) <br>
+[Example](https://github.com/axelhieber/php-template/blob/master/tpl.html) <br>
 Template variables:<br>
 - `{var}` - single variable <br>
 - `{loop items} {name} {end loop}` - loop for items array <br>
 - `{%index%}` - index of item in items loop
 
 ## Create index.php file
-[Example](https://github.com/isRuslan/php-template/blob/master/index.php) <br>
+[Example](https://github.com/axelhieber/php-template/blob/master/index.php) <br>
 - Include template class:<br>
 `include 'template.php';`
 - Create an object:<br>
